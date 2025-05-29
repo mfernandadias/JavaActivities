@@ -1,0 +1,28 @@
+O que são Classes Wrapper em Java ?
+As classes wrapper são classes que encapsulam os tipos primitivos de dados em objetos.
+Java é uma lingugaem orientada a objetos e certos recursos (como coleções) exigem objetos
+em vex de tipos primitivos
+
+Tipo Primitivo	Classe Wrapper
+byte	        Byte
+short	        Short
+int	            Integer
+long	        Long
+float	        Float
+double	        Double
+char	        Character
+boolean	        Boolean
+
+O que são as classes wrappers do Java
+Resumo: Introdução às classes wrappers e sua utilizade
+int numero = 10;
+Integer wrapper = Integer.valueOf(numero); //convertendo int para Interger
+System.out.println(warepper;
+
+Conceitos que serão praticados
+Autoboxing e unboxing
+Métodos das wrappers(parseInt, valueOf, compareTo, etc)
+Comparações
+Conversão de tipos primitivos e objetos wrapper
+Null Safety
+Uso em collections
