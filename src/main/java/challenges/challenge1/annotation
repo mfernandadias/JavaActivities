@@ -1,0 +1,9 @@
+Crie uma classe Tarefa com atributos: titulo, descricao, dataLimite (Date) e prioridade (Enum).
+
+Use um ArrayList<Tarefa> e implemente ordenação por data e prioridade com Comparator.
+
+Use SimpleDateFormat para entrada e saída das datas.
+
+Desafio: mostrar as tarefas vencidas (antes da data atual).
+
+📚 Conceitos: Date, Enum, ArrayList, Comparator, SimpleDateFormat.
