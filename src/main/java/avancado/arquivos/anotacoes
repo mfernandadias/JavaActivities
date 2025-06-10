@@ -1,0 +1,20 @@
+Vamos abordar a leitura e escrita de arquivos em Java com as classes
+File
+FileReader
+Buffered Reader
+FileWriter
+
+Conceitos
+File
+Usada para representar arquivos ou diretórios no sistema de arquivos.
+Pode verificar se um arquivo existe, criar ou deletar etc
+
+FileReader
+Lê caracteres de um arquivo. Não é eficiente para arquivos grander -
+normalmente é usado junto com BufferedReader
+
+BufferedReader
+fornece leitura de caracteres, arrays e linhas. Envolve em FileReader
+
+FileWriter
+Escreve caracteres em arquivos. Pode ser confiurado para sobrescrever ou adicionar conteúdo(append)
