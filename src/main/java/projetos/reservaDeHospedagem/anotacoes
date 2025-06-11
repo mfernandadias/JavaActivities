@@ -1,0 +1,10 @@
+Exemplo de Classes Planejadas:
+
+Main – execução do menu
+Cliente – dados do hóspede
+Reserva – dados da reserva
+Quarto (abstrata) – base para tipos de quarto
+QuartoIndividual, QuartoDuplo, Suite – subclasses de Quarto
+SistemaReservas – regras de negócio e controle
+ArquivoUtil – leitura e escrita de dados
+Menu – controle do menu e entrada de dados
