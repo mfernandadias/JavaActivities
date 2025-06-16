@@ -34,8 +34,6 @@ public class Menu {
             System.out.println("3. Listar todas as reservas");
             System.out.println("4. Listar quartos disponíveis");
             System.out.println("5. Listar todos os cliente cadastrados");
-            System.out.println("6. Salvar todos os dados");
-            System.out.println("7. Carregar todos os dados");
             System.out.println("0. Sair");
             System.out.print("Escolha uma opção: ");
             opcao = scan.nextInt();
@@ -82,6 +80,7 @@ public class Menu {
 
                     System.out.println("Digite o numero do quarto");
                     int numeroQuarto = scan.nextInt();
+                    scan.nextLine(); // Limpar o buffer
 
                     System.out.println("Digite a data de entrada: ");
                     String dataEntradaStr = scan.nextLine();
@@ -94,6 +93,7 @@ public class Menu {
                     } catch (Exception e) {
                         System.out.println("Formato de data inválido.");
                     }
+                    scan.nextLine(); // Limpar o buffer
 
                     System.out.println("Digite a data de saída (formato dd/MM/yyyy): ");
                     String dataSaidaStr = scan.nextLine();
@@ -119,11 +119,6 @@ public class Menu {
                 case 5:
                     sistema.listarClientes();
                     break;
-                case 6:
-                    sistema.salvarDadosEmArquivo();
-                    break;
-                case 7:
-                    sistema.carregarDadosDeArquivo();
                 case 0:
                     System.out.println("Encerrando o sistema...");
                     break;
@@ -135,13 +130,5 @@ public class Menu {
 
 }
 
-/*
-public void salvarDadosEmArquivo() {
-        ArquivoUtil.salvarClientes(clientes);
-        ArquivoUtil.salvarQuartos(quartos);
-        ArquivoUtil.salvarReservas(reservas);
-        System.out.println("Dados salvos com sucesso.");
-    }
- */
 
 
