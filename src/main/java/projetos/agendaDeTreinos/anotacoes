@@ -1,0 +1,15 @@
+Agenda de Treinos
+Campos
+* Nome de exercício
+* duração (min)
+* Dia da semana
+* status: Realizado ou Pendente
+
+Extras:
+* Filtrar por dia
+* Mostrar total de minutos por semana
+
+
+Dica: Comece assim como na To-Do List:
+Java puro primeiro (com Scanner e ArrayList)
+Depois migre para Spring Boot com HTML (Thymeleaf) ou API REST

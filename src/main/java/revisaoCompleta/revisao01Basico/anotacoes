@@ -1,0 +1,26 @@
+Anotacoes
+Sintaxe básica (variáveis, tipos de dados, operadores)
+Estruturas de controle (if, switch, loops)
+Métodos e sobrecarga
+Arrays e Strings
+Entrada e saída (Scanner, System.out)
+
+EXERCÍCIOS DE FIXAÇÃO
+🟢 BÁSICO
+Dada a lista List<Integer> nums = Arrays.asList(3, 4, 5, 6, 7);,
+filtre apenas os números maiores que 4.
+Transforme List<String> nomes = Arrays.asList("joao", "maria", "ana");
+em letras maiúsculas usando map.
+Calcule a soma de uma lista de inteiros usando reduce.
+
+🟡 INTERMEDIÁRIO
+Dada a lista ["café", "chá", "leite", "suco"],
+filtre os elementos que têm mais de 3 letras e coloque-os em uma nova lista.
+Crie uma lista de nomes com a primeira letra maiúscula e o restante minúscula (ex: "ana" → "Ana").
+Dada List<Integer> = Arrays.asList(1, 2, 3, 4, 5);, crie uma nova lista com o dobro de cada número.
+
+🔴 AVANÇADO
+Com uma lista de pessoas (Pessoa(nome, idade)), filtre quem tem mais de 18 anos e pegue os nomes.
+Calcule a média de idades de uma lista de pessoas usando mapToInt e average().
+Agrupe palavras pela primeira letra usando Collectors.groupingBy.
+Conte quantas vezes cada nome aparece em uma lista com Collectors.groupingBy + Collectors.counting.

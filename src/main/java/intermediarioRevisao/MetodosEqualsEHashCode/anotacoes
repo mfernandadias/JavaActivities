@@ -1,0 +1,7 @@
+Entendendo equals() e hashCode() em Java
+
+1 - equals()
+O método equals() é usado para determinar se dois objetos são "iguais" em termos de seu conteúdo,
+e não apenas se eles são a mesma instância na memória
+Assinatura
+public boolean equals(Object obj)

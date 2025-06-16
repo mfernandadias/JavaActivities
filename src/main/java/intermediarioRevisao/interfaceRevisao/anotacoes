@@ -1,0 +1,4 @@
+1 - Consumer<T>
+Usada quando você quer consumir um valor, ou seja, realizar uma ação sem retornar nada
+Método funcional: void accept(T t);
+

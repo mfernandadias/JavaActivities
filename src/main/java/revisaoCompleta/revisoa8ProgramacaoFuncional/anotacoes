@@ -1,0 +1,7 @@
+✅ Principais interfaces funcionais:
+| Interface       | Método principal    | Exemplo de uso                  |
+| --------------- | ------------------- | ------------------------------- |
+| `Predicate<T>`  | `boolean test(T t)` | Filtrar, testar condições       |
+| `Function<T,R>` | `R apply(T t)`      | Transformar um tipo em outro    |
+| `Consumer<T>`   | `void accept(T t)`  | Consumir valores (ex: imprimir) |
+| `Supplier<T>`   | `T get()`           | Fornecer um valor               |

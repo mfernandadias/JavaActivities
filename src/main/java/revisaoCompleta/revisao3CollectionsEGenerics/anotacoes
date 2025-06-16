@@ -1,0 +1,29 @@
+Anotações - collections e Generics em Java
+O que é a Java Framework :
+A Java Framework é um conjunto de interfaces e classes que fornecem estruturas de
+dados prontas(listas, conjuntos, mapas, etc) e algortimos para manipulá-las
+
+HashMap
+Estrutura de chave-valor (ex: dicionario)
+Permite null como chave e valor
+HashMap<String, Integer> notas = new HashMap<>();
+notas.put("Ana", 9);
+System.out.println(notas.get("Ana")); // 9
+
+Iteradores
+Iterator
+* Permite percorrer listas/conjuntos
+* Pode remover elementos com segurança durante a iteração
+Iterator<String> it = nomes.iterator();
+while (it.hasNext()) {
+    System.out.println(it.next());
+}
+
+ListIterador
+* Apenas para listas (List)
+* Permite percorrer em ambas as direções e modificar a lista
+ListIterator<String> it = nomes.listIterator();
+while (it.hasNext()) {
+    System.out.println(it.next());
+}
+

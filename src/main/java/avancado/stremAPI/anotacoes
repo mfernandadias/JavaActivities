@@ -1,0 +1,10 @@
+Stream API
+
+Stream API do Java (desde o Java 8) permite processar coleções de dados
+(como listas) de maneira declarativa, eficiente e muitas vezes parelela, utilizando uma
+abordagem funcional. Vamos ver os principais conceitos e depois exercícios.
+
+Principais métodos da STREAM API
+1 - Filter
+Filtra elementos com base em uma condição booleana
+

@@ -1,0 +1,10 @@
+O que são Generics em Java ?
+Generics permitem que você escreva código reutilizável e seguro em tempo de compilação.
+Em vez de trabalhar com tipos fixos, você pode parâmetros de tipo (como <T>) para escrever, interfaces
+e métodos que funcionam com qualquer tipo de dado.
+
+Vantagens dos Generics
+1 - Segurança de tipo - evita ClassCastExpection em tempo de execução
+2 - reutilização de código - não precisa reescrever para cada tipo
+3 - Legibilidade e manutenção - mais claro o que estáa sendo manipulado
+

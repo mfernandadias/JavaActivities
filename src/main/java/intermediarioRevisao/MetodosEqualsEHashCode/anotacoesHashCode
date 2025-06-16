@@ -1,0 +1,3 @@
+Contrato de hashCode()
+Se dois objetos são considerados equals (ou seja,
+obj1.equals(obj2) retorna true), então eles devem ter o mesmo hashCode.

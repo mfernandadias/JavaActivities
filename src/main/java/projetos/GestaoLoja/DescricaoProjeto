@@ -1,0 +1,47 @@
+Projeto: Sistema de Gestão para Loja de Ferragem e Bazar
+Objetivo
+Desenvolver um sistema em Java, utilizando ArrayList e POO, que simula o controle
+de estoque, vendas, pagamento e produtos em uma loja de ferragem e bazar.
+O sistema deve permitir o cadastro e a gestão de produtos, registrar vendas com data,
+e emitir relatórios de vendas diárias e mensais.
+Deve ainda detectar produtos com estoque zerado e controlar pagamentos de coletos e funcionários.
+
+Conceitos a serem praticados
+| Conceito               | Aplicação                                                    |
+| ---------------------- | ------------------------------------------------------------ |
+| Classe Abstrata        | Produto base comum (`Produto`)                               |
+| Herança e Polimorfismo | Subclasses `ProdutoFerragem` e `ProdutoBazar`                |
+| `ArrayList`            | Armazenamento de produtos, vendas e pagamentos               |
+| `LocalDate`            | Registro de datas de vendas e pagamentos                     |
+| Interface Funcional    | Filtros para vendas e produtos                               |
+| Encapsulamento         | Uso de `private` e métodos `get/set`                         |
+| CRUD                   | Criar, listar, atualizar e excluir produtos                  |
+| Relatórios             | Vendas do dia, vendas do mês, produtos fora de estoque, etc. |
+
+
+Estrutura de Classes
+/loja
+│
+├── Main.java
+│
+├── model/
+│   ├── Produto.java               → classe abstrata
+│   ├── ProdutoFerragem.java       → extends Produto
+│   ├── ProdutoBazar.java          → extends Produto
+│   ├── Venda.java                 → data da venda, lista de produtos vendidos
+│   ├── Pagamento.java             → classe para pagamentos
+│   ├── Enum: CategoriaDePagamento → BOLETO_LOJA
+                                     COMIDA
+                                     FUNCIONARIO
+                                     GASTO_PESSOAL
+                                     MANUTENCAO_ESTRUTURA
+                                     EQUIPAMENTOS
+                                     EMERGENCIA
+│
+├── service/
+│   ├── EstoqueService.java        → CRUD de produtos, alerta de estoque
+│   ├── VendaService.java          → registrar vendas, buscar por data
+│   ├── PagamentoService.java      → controlar pagamentos
+│
+└── util/
+    └── RelatorioService.java      → relatórios com uso de lambda

@@ -19,6 +19,7 @@ public class Reserva {
         this.dataEntrada = dataEntrada;
         this.dataSaida = dataSaida;
 
+
     }
 
     //oq posso melhorar nessas duas construções

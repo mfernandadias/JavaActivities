@@ -1,0 +1,78 @@
+Coleções em Java (Java Collections Framework)
+O Java Collections Framework é um conjunto de interfaces e classes
+que facilitam o armazenamento e manipulação de grupos de dados de
+forma eficiente
+
+Em Java, Colection é uma interface raiz da hierarquia de coleções na linguagem.
+Ela está no pacote java.util e fornece a base para estruturas de dados que armazenam
+múltiplos elementos como listas, conjuntos e filas
+
+O que é Collection?
+Collection é uma interface genérica:
+public interface Collection<E>
+O E é o tipo de dado que você vai armazenar (por exemplo, String, Integer, etc.).
+Ela não é instanciada diretamente, mas suas implementações são usadas, como:
+
+List (ex: ArrayList, LinkedList)
+Set (ex: HashSet, TreeSet)
+Queue (ex: PriorityQueue, ArrayDeque)
+
+Principais Tipos
+| Coleção      | Tipo de Estrutura               | Permite Duplicatas? | Ordenação           |
+| ------------ | ------------------------------- | ------------------- | ------------------- |
+| `ArrayList`  | Lista (Array dinâmico)          | ✅ Sim               | ✔ Ordem de inserção |
+| `LinkedList` | Lista (lista duplamente ligada) | ✅ Sim               | ✔ Ordem de inserção |
+| `HashSet`    | Conjunto (sem duplicatas)       | ❌ Não               | ❌ Não garante ordem |
+| `HashMap`    | Mapa (chave-valor)              | ✅ Chave única       | ❌ Não garante ordem |
+
+Explicações e Códigos
+ArrayList -> Exemplo classe frutas
+
+Armazenam Objetos (não tipos primitivos)
+As coleções só armazenam objetos (instâncias de classes)
+Tipos primitivos (como int, char) são automaticamnete convertidos em seus equipamentos
+wrappers (como Integer, Character) usando autoboxing
+
+Tabela Resumo das principais coleções
+| Interface | Implementações comuns                 | Ordenação                  | Duplicatas | Sincronizada? | Exemplo comum     |
+| --------- | ------------------------------------- | -------------------------- | ---------- | ------------- | ----------------- |
+| `List`    | `ArrayList`, `LinkedList`             | Mantém ordem de inserção   | ✅ Sim      | ❌ Não         | Lista de nomes    |
+| `Set`     | `HashSet`, `LinkedHashSet`, `TreeSet` | ❌ (HashSet) ou ✅ (TreeSet) | ❌ Não      | ❌ Não         | Conjunto de CPFs  |
+| `Queue`   | `LinkedList`, `PriorityQueue`         | Fila (FIFO) / prioridade   | ✅ Sim      | ❌ Não         | Fila de tarefas   |
+| `Map`     | `HashMap`, `TreeMap`, `LinkedHashMap` | Ordenado em TreeMap        | ❌ (chaves) | ❌ Não         | Agenda telefônica |
+
+Principais métodos da interface Collection
+| Método                      | Descrição                                      |
+| --------------------------- | ---------------------------------------------- |
+| `add(E e)`                  | Adiciona um elemento                           |
+| `addAll(Collection c)`      | Adiciona todos os elementos de outra coleção   |
+| `remove(Object o)`          | Remove um elemento                             |
+| `removeAll(Collection c)`   | Remove todos os elementos da coleção passada   |
+| `contains(Object o)`        | Verifica se o elemento existe                  |
+| `containsAll(Collection c)` | Verifica se contém todos os elementos          |
+| `isEmpty()`                 | Verifica se a coleção está vazia               |
+| `size()`                    | Retorna o número de elementos                  |
+| `clear()`                   | Remove todos os elementos                      |
+| `iterator()`                | Retorna um `Iterator` para percorrer elementos |
+
+
+Collection
+├── List (permite elementos duplicados, ordenados)
+│   ├── ArrayList
+│   └── LinkedList
+│
+├── Set (não permite elementos duplicados)
+│   ├── HashSet
+│   └── TreeSet
+│
+└── Queue (ordem de processamento - FIFO, LIFO, prioridade)
+    ├── LinkedList
+    └── PriorityQueue
+
+Tabela comparativa entre List, Set e Queue em Java
+| Característica       | `List`                     | `Set`                                                  | `Queue`                       |
+| -------------------- | -------------------------- | ------------------------------------------------------ | ----------------------------- |
+| Ordem dos elementos  | Mantém a ordem de inserção | Não garante ordem (exceto `LinkedHashSet` e `TreeSet`) | Mantém ordem de processamento |
+| Elementos duplicados | ✅ Permite                  | ❌ Não permite                                          | ✅ Depende da implementação    |
+| Acesso por índice    | ✅ Sim                      | ❌ Não                                                  | ❌ Geralmente não              |
+| Exemplos             | `ArrayList`, `LinkedList`  | `HashSet`, `TreeSet`                                   | `LinkedList`, `PriorityQueue` |

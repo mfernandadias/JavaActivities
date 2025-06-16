@@ -1,0 +1,12 @@
+File
+A classe File representa um caminho para um arquivo ou diretório, mas não lê nem escreve
+dados diretamente. Ela é usada para:
+Verificar se o arquivo existe
+Criar arquivos
+Obter informações sobre arquivos (nome, tamanho, etc)
+
+FileReader
+DileReader é usado para ler arquivos de texto, caractere por caractere. Ele não é muito
+eficiente sozinho, por isso geralmente é usado com BufferedReader
+Exemplo simples com FileReader:
+

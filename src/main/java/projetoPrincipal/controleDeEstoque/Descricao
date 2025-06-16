@@ -1,0 +1,32 @@
+Gerenciamento de Inventário
+Sistema para gerenciar o estoque em uma loja ou depósito.
+
+Criar uma aplicação em Java que simula um sistema de controle de estoque utilizando ArrayList
+para armazenar os dados em memória, com foco em operações CRUD(Criar, Ler, Atualizar, Excluir)
+e aplicação prática de conceitos intermediários como herança, polimorfismo, classe abstrata,
+interface funcional e datas
+
+Conceitos que você vai praticar
+Conceito	                   Aplicação no projeto
+Classe                         Abstrata	Representação genérica de um produto (Produto)
+Herança e Polimorfismo	       Produtos diferentes com comportamentos específicos
+Interface Funcional	           Filtros e relatórios personalizados com lambda
+LocalDate	                   Datas de validade e cadastro
+ArrayList	                   Armazenamento de produtos
+CRUD	                       Manipulação de produtos via menu ou interface
+
+/inventario
+│
+├── Main.java
+│
+├── model/
+│   ├── Produto.java               → classe abstrata
+│   ├── ProdutoPerecivel.java      → extends Produto
+│   └── ProdutoNaoPerecivel.java   → extends Produto
+│
+├── service/
+│   ├── InventarioService.java     → CRUD usando ArrayList
+│   └── RelatorioService.java      → geração de relatórios com lambda
+│
+└── util/
+    └── InputHelper.java           → ajuda para leitura de dados do usuário

@@ -1,0 +1,18 @@
+Polimorfismo
+Capacidade de um objeto se comportar de diferentes formas dependendo do
+contexto
+Pode ser:
+* Sobrescrita(override): redefinir um método da superclasse
+Sobrecarga(overload): Métodos com o mesmo nome, mas parâmetros diferentes
+
+Diferença de Interface e classe Abstract ?
+| Característica                | Interface                                                                | Classe Abstrata                                                   |
+| ----------------------------- | ------------------------------------------------------------------------ | ----------------------------------------------------------------- |
+| **Objetivo principal**        | Contrato (o que deve ser feito)                                          | Estrutura base (o que e como fazer)                               |
+| **Implementação de métodos**  | Não tem implementação (até Java 7); Java 8+ permite `default` e `static` | Pode ter métodos com ou sem corpo                                 |
+| **Palavra-chave**             | `interface`                                                              | `abstract class`                                                  |
+| **Instanciação direta**       | Não pode                                                                 | Também não pode                                                   |
+| **Atributos**                 | Só constantes (`public static final`)                                    | Pode ter atributos normais e protegidos                           |
+| **Modificadores dos métodos** | Todos os métodos são `public abstract` por padrão                        | Métodos podem ser `private`, `protected` ou `public`              |
+| **Herdeiros**                 | Uma classe pode implementar várias interfaces                            | Uma classe só pode estender UMA classe abstrata                   |
+| **Construtores**              | Não tem                                                                  | Pode ter construtor (mas não é usado para instanciar diretamente) |

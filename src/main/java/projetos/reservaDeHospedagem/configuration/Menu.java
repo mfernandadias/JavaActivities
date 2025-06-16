@@ -2,9 +2,13 @@ package projetos.reservaDeHospedagem.configuration;
 import projetos.reservaDeHospedagem.model.Cliente;
 import projetos.reservaDeHospedagem.service.SistemaReservas;
 
+//import java.io.FilePermissionCollection;
+import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
+import java.util.Date;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Menu {
@@ -18,7 +22,7 @@ public class Menu {
     listarTodasReservas()
     listarQuartosDisponiveis()
      */
-    private Scanner scanner = new Scanner(System.in);
+    Scanner scan = new Scanner(System.in);
     private SistemaReservas sistema = new SistemaReservas(); // Classe fictícia que gerencia dados
 
     public void mostrarMenuPrincipal() {
@@ -29,24 +33,97 @@ public class Menu {
             System.out.println("2. Realizar nova reserva");
             System.out.println("3. Listar todas as reservas");
             System.out.println("4. Listar quartos disponíveis");
+            System.out.println("5. Listar todos os cliente cadastrados");
+            System.out.println("6. Salvar todos os dados");
+            System.out.println("7. Carregar todos os dados");
             System.out.println("0. Sair");
             System.out.print("Escolha uma opção: ");
-            opcao = scanner.nextInt();
-            scanner.nextLine(); // Limpar o buffer
+            opcao = scan.nextInt();
+            scan.nextLine(); // Limpar o buffer
+
+
+            //cadastrarCliente
 
             switch (opcao) {
                 case 1:
-                    cadastrarNovoCliente();
+                    System.out.println("\n=== Cadastro de Novo Cliente ===");
+
+                    System.out.print("Nome: ");
+                    String nome = scan.nextLine();
+
+                    System.out.print("Data de nascimento (formato yyyy-MM-dd): ");
+                    String dataStr = scan.nextLine();
+                    LocalDate dataNascimento = null;
+
+                    try {
+                        dataNascimento = LocalDate.parse(dataStr, DateTimeFormatter.ofPattern("yyyy-MM-dd"));
+                    } catch (DateTimeParseException e) {
+                        System.out.println("Data inválida! Cliente não cadastrado.");
+                        return;
+                    }
+
+                    System.out.print("CPF: ");
+                    String cpf = scan.nextLine();
+
+                    System.out.print("Contato: ");
+                    String contato = scan.nextLine();
+
+                    // Criar o objeto Cliente
+                    Cliente novoCliente = new Cliente(nome, dataNascimento, cpf, contato);
+
+                    // Chamar o método da classe SistemaReservas
+                    sistema.cadastrarCliente(novoCliente);
                     break;
                 case 2:
-                    realizarNovaReserva();
+                    //public void realizarReserva(String cpf, int numeroQuarto,
+                    // Date dataEntrada, java.util.Date dataSaida)
+                    System.out.println("Digite o CPF: ");
+                    cpf = scan.nextLine();
+
+                    System.out.println("Digite o numero do quarto");
+                    int numeroQuarto = scan.nextInt();
+
+                    System.out.println("Digite a data de entrada: ");
+                    String dataEntradaStr = scan.nextLine();
+                    Date dataEntradaDate = null;
+
+                    try {
+                        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+                        dataEntradaDate = sdf.parse(dataEntradaStr);
+                        System.out.println("Data de entrada convertida: " + dataEntradaDate);
+                    } catch (Exception e) {
+                        System.out.println("Formato de data inválido.");
+                    }
+
+                    System.out.println("Digite a data de saída (formato dd/MM/yyyy): ");
+                    String dataSaidaStr = scan.nextLine();
+                    Date dataSaidaDate = null;
+
+                    try {
+                        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+                        dataSaidaDate = sdf.parse(dataSaidaStr);
+                        System.out.println("Data de saída convertida: " + dataSaidaDate);
+                    } catch (Exception e) {
+                        System.out.println("Formato de data inválido.");
+                    }
+
+                    sistema.realizarReserva(cpf, numeroQuarto, dataEntradaDate, dataSaidaDate);
+
                     break;
                 case 3:
-                    listarTodasReservas();
+                    sistema.listarReservas();
                     break;
                 case 4:
-                    listarQuartosDisponiveis();
+                    sistema.listarQuartosDisponiveis();
                     break;
+                case 5:
+                    sistema.listarClientes();
+                    break;
+                case 6:
+                    sistema.salvarDadosEmArquivo();
+                    break;
+                case 7:
+                    sistema.carregarDadosDeArquivo();
                 case 0:
                     System.out.println("Encerrando o sistema...");
                     break;
@@ -55,62 +132,16 @@ public class Menu {
             }
         } while (opcao != 0);
     }
-    /*
-    public void cadastrarCliente(Cliente c){
-        clientes.add(c);
-        System.out.println("Cliente cadastrado com sucesso");
-    }
-     */
-    public void cadastrarNovoCliente() {
-        Scanner scanner = new Scanner(System.in);
 
-        System.out.print("Nome do cliente: ");
-        String nome = scanner.nextLine();
-
-        System.out.print("Data de nascimento (dd/MM/yyyy): ");
-        String dataNascStr = scanner.nextLine();
-
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
-        LocalDate dataNascimento;
-
-        try {
-            dataNascimento = LocalDate.parse(dataNascStr, formatter);
-        } catch (DateTimeParseException e) {
-            System.out.println("❌ Data inválida. Use o formato dd/MM/yyyy (ex: 21/08/2000).");
-            return; // ou: repetir a entrada, dependendo da lógica do seu menu
-        }
-
-        System.out.print("CPF: ");
-        String cpf = scanner.nextLine();
-
-        System.out.print("Contato: ");
-        String contato = scanner.nextLine();
-
-        Cliente cliente = new Cliente(nome, dataNascimento, cpf, contato);
-        sistema.cadastrarCliente(cliente); // Usa o método da classe SistemaReservas
-    }
-
-    public void realizarNovaReserva() {
-        System.out.print("CPF do cliente: ");
-        String cpf = scanner.nextLine();
-        System.out.print("Número do quarto: ");
-        int numeroQuarto = scanner.nextInt();
-        scanner.nextLine();
-        System.out.print("Data da reserva (dd/mm/aaaa): ");
-        String data = scanner.nextLine();
-        boolean sucesso = sistema.reservarQuarto(cpf, numeroQuarto, data);
-        if (sucesso) {
-            System.out.println("Reserva realizada com sucesso.");
-        } else {
-            System.out.println("Erro ao realizar a reserva.");
-        }
-    }
-
-    public void listarTodasReservas() {
-        sistema.listarReservas();
-    }
-
-    public void listarQuartosDisponiveis() {
-        sistema.listarQuartosDisponiveis();
-    }
 }
+
+/*
+public void salvarDadosEmArquivo() {
+        ArquivoUtil.salvarClientes(clientes);
+        ArquivoUtil.salvarQuartos(quartos);
+        ArquivoUtil.salvarReservas(reservas);
+        System.out.println("Dados salvos com sucesso.");
+    }
+ */
+
+

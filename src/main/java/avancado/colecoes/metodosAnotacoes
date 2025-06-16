@@ -1,0 +1,68 @@
+As coleções em Java compartilham vários métodos
+List, Set, Map, Queue
+Possui métodos específicos. Abaixo estão os principais métodos organizados
+por tipo, com explicação claras e exemplos
+
+1. MÉTODOS COMUNS A List, Set, Queue (interface Collection)
+Esses métodos estão na interface Collection<E> e funcionam em ArrayList, HashSet,
+LinkedList, ect
+| Método               | O que faz                                    | Exemplo                           |
+| -------------------- | -------------------------------------------- | --------------------------------- |
+| `add(E e)`           | Adiciona um elemento                         | `lista.add("João");`              |
+| `remove(Object o)`   | Remove o elemento especificado               | `set.remove(10);`                 |
+| `contains(Object o)` | Verifica se contém o elemento                | `lista.contains("Maria");`        |
+| `isEmpty()`          | Verifica se está vazia                       | `set.isEmpty();`                  |
+| `size()`             | Retorna a quantidade de elementos            | `fila.size();`                    |
+| `clear()`            | Remove todos os elementos                    | `lista.clear();`                  |
+| `iterator()`         | Retorna um iterator para percorrer a coleção | `Iterator it = lista.iterator();` |
+
+ 2. MÉTODOS EXCLUSIVOS DE List
+ Listas (como ArrayList e LinkedList) têm índices:
+ | Método                  | O que faz                             | Exemplo                        |
+ | ----------------------- | ------------------------------------- | ------------------------------ |
+ | `get(int index)`        | Retorna o elemento na posição         | `lista.get(0);`                |
+ | `set(int index, E e)`   | Substitui o valor em uma posição      | `lista.set(0, "Pedro");`       |
+ | `add(int index, E e)`   | Insere elemento em posição específica | `lista.add(1, "Maria");`       |
+ | `indexOf(Object o)`     | Retorna o índice da 1ª ocorrência     | `lista.indexOf("Carlos");`     |
+ | `lastIndexOf(Object o)` | Último índice da ocorrência           | `lista.lastIndexOf("Carlos");` |
+
+
+ 3. MÉTODOS DE Set (como HashSet)
+Sets não aceitam duplicatas. Herda da interface Collection
+| Método          | O que faz                     | Exemplo             |
+| --------------- | ----------------------------- | ------------------- |
+| `add(E e)`      | Adiciona se não for duplicado | `set.add(10);`      |
+| `remove(E e)`   | Remove elemento               | `set.remove(10);`   |
+| `contains(E e)` | Verifica se existe            | `set.contains(10);` |
+
+ 4. MÉTODOS DE Map<K, V> (como HashMap)
+ Maps trabalham com pares chave-valor:
+ | Método                   | O que faz                         | Exemplo                                      |
+ | ------------------------ | --------------------------------- | -------------------------------------------- |
+ | `put(K key, V value)`    | Associa a chave a um valor        | `map.put("user", "1234");`                   |
+ | `get(K key)`             | Retorna o valor associado à chave | `map.get("user");`                           |
+ | `containsKey(K key)`     | Verifica se a chave existe        | `map.containsKey("admin");`                  |
+ | `containsValue(V value)` | Verifica se o valor existe        | `map.containsValue("senha");`                |
+ | `remove(K key)`          | Remove a chave e seu valor        | `map.remove("admin");`                       |
+ | `keySet()`               | Retorna todas as chaves           | `Set<String> chaves = map.keySet();`         |
+ | `values()`               | Retorna todos os valores          | `Collection<String> valores = map.values();` |
+ | `entrySet()`             | Retorna os pares chave-valor      | `for (Map.Entry e : map.entrySet())`         |
+
+ 5. MÉTODOS DE Queue
+ Filas funcionam como FIFO (primeiro a entrar, primeiro a sair):
+ | Método       | O que faz                              | Exemplo                    |
+ | ------------ | -------------------------------------- | -------------------------- |
+ | `add(E e)`   | Adiciona no fim da fila                | `fila.add("Cliente 1");`   |
+ | `offer(E e)` | Adiciona (não lança exceção se falhar) | `fila.offer("Cliente 2");` |
+ | `poll()`     | Remove e retorna o primeiro elemento   | `fila.poll();`             |
+ | `peek()`     | Retorna o primeiro sem remover         | `fila.peek();`             |
+
+
+🎓 DICA VISUAL RESUMIDA
+| Interface    | Métodos importantes                                                   |
+| ------------ | --------------------------------------------------------------------- |
+| `Collection` | `add()`, `remove()`, `contains()`, `size()`, `isEmpty()`              |
+| `List`       | `get()`, `set()`, `add(index, e)`, `indexOf()`                        |
+| `Set`        | `add()`, `remove()`, `contains()`                                     |
+| `Map`        | `put()`, `get()`, `remove()`, `containsKey()`, `keySet()`, `values()` |
+| `Queue`      | `add()`, `offer()`, `poll()`, `peek()`                                |

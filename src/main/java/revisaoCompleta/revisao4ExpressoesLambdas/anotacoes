@@ -1,0 +1,9 @@
+Expressões Lambdas
+
+Interface funcional
+É uma interface com apenas um método abstrato
+Exemplo:
+
+
+(parAmetros) -> {corpo}
+

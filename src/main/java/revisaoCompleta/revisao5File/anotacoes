@@ -1,0 +1,56 @@
+Manipulação de Arquivos
+Aprender a criar, verificar, renomear e deletar usando a classe File do pacote java.io
+
+Conceito
+A classe File representa um nome de arquivo ou diretório. Ela permite:
+* Criar arquivos e pastas
+* Verificar se um arquivo existe
+* Deletar arquivos ou diretórios
+* Listar arquivos de um diretório
+* Ver atributos como caminho, nome e permissões
+
+Importação Necessário
+import java.io.File;
+import java.io.IOExpection;
+
+1 - File (Representação Arquivos ou Diretórios)
+Para quê serve:
+Usada para manipular arquivos e diretórios no sistema de arquivos: criar, deletar, verificar existência, nome, caminho, etc.
+
+🧠 Principais métodos:
+exists(), createNewFile(), delete()
+
+mkdir(), getName(), getAbsolutePath(), length()
+
+2 - FileReader - Ler arquivos de texto(caractere por caractere)
+✅ Para quê serve:
+Lê arquivos de texto como fluxo de caracteres. Ideal para arquivos .txt.
+
+🧠 Requer tratamento de exceção com try-catch.
+🧪 Exemplo:
+
+📘 3. BufferedReader – Ler texto por linhas (mais eficiente)
+✅ Para quê serve:
+Lê arquivos linha por linha (mais rápido que FileReader puro). Usa readLine().
+
+🧪 Exemplo:
+
+🖊️ 4. FileWriter – Escrever em arquivos de texto
+✅ Para quê serve:
+Escreve texto em arquivos (caracteres). Pode sobrescrever ou adicionar conteúdo.
+
+🧠 Construtor:
+new FileWriter("arquivo.txt"): sobrescreve
+
+new FileWriter("arquivo.txt", true): adiciona (append)
+
+🧪 Exemplo:
+
+🧱 5. ObjectOutputStream & ObjectInputStream – Serialização e Desserialização
+✅ Para quê servem:
+ObjectOutputStream: grava objetos em arquivos (serialização)
+
+ObjectInputStream: lê objetos de arquivos (desserialização)
+
+🎯 Importante:
+A classe do objeto deve implementar Serializable

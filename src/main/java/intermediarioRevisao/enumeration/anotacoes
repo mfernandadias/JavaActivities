@@ -1,0 +1,23 @@
+O que é um enum em Java ?
+O enum (abrevialççao de enumeration) é um tipo especial de classe que representa um
+conjunto foxo de constantes. Por exemplo, os dias da semana, meses do ano, direções
+(NORTE, SUL, ETC) - todos são bons exemplos para usar enum.
+
+Características:
+São tipos seguros em tempo de compilação
+Cada valor do enum é um objeto da prórpia anumeração
+Podem conter atributos, construtores e métodos
+São usados para substituir constantes inteiras (int) ou String
+
+Conhecendo mais detalhes sobre os enums
+Aborda:
+ordinal(): posição no enum
+name(): nome da constante
+valueOf(): converte string para enum
+values(): retorna todas as constantes
+
+enums que implementam interfaces
+ordinal(): posição no enum
+name(): nome da constante
+valueOf(): converte String para enum
+values(): retorna todas as constantes

@@ -1,0 +1,72 @@
+Projeto: To-Do List (Lista de Tarefas)
+🎯 Objetivo Geral
+Criar uma aplicação de lista de tarefas que permita adicionar, visualizar, atualizar e remover tarefas. O projeto será desenvolvido inicialmente com Java puro, utilizando o terminal (modo texto), e depois será migrado para uma aplicação web com Spring Boot, organizando o código com boas práticas de POO e MVC.
+
+✅ Fase 1 – Java Puro (Console)
+📌 Funcionalidades:
+Adicionar tarefa com título e descrição.
+Listar todas as tarefas.
+Marcar tarefa como concluída.
+Editar tarefa existente.
+Remover tarefa por ID.
+Salvar as tarefas em memória (usando ArrayList).
+
+📁 Estrutura sugerida:
+Classe Task: representa uma tarefa.
+Classe TaskManager: contém os métodos CRUD.
+Classe Main: exibe o menu no console e interage com o usuário.
+
+🧠 Conceitos abordados:
+Programação orientada a objetos
+Manipulação de listas com ArrayList
+Uso de Scanner para entrada de dados
+Estruturas de decisão e repetição
+Boas práticas com métodos e classes
+
+🚀 Fase 2 – Spring Boot (Web App)
+🧱 Estrutura sugerida:
+Camada Model: classe Task como entidade
+
+Camada Repository: interface que simula o banco de dados (pode começar com List<Task>)
+
+Camada Service: regras de negócio
+
+Camada Controller: lida com as requisições HTTP
+
+Frontend: páginas HTML simples com Thymeleaf ou REST com frontend separado
+
+📌 Funcionalidades Web:
+Página de cadastro de tarefa
+
+Página de listagem de tarefas
+
+Botão para marcar como concluída
+
+Botão para editar tarefa
+
+Botão para excluir tarefa
+
+Persistência com banco de dados (H2, MySQL ou outro)
+
+🧠 Tecnologias:
+Spring Boot
+
+Spring MVC
+
+Spring Data JPA
+
+Thymeleaf ou API REST (caso use frontend separado)
+
+H2 Database (ou outro)
+
+🎓 Aprendizados:
+Diferença entre Java console e aplicações web
+
+Estruturação em camadas com Spring Boot
+
+Integração com banco de dados
+
+Princípios REST
+
+Templates com HTML + Thymeleaf (ou frontend com JS)
+

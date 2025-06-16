@@ -1,0 +1,12 @@
+Topos de Métodos em Java com Explicação
+Métodos de Instância
+Descrição: São chamados em objetos criados a apartir da classe
+Exemplo
+public class Pessoa {
+    public void falar() {
+        System.out.println("Olá!");
+    }
+}
+// Uso:
+Pessoa p = new Pessoa();
+p.falar();

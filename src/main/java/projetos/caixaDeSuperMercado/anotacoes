@@ -1,0 +1,8 @@
+🎯 Resumo da Estrutura e Justificativa
+
+Essa organização permite mostrar:
+Uso de encapsulamento (classes separadas e bem definidas);
+Uso de coleções (ArrayList para armazenar produtos);
+Controle de fluxo com switch para aplicar descontos;
+Formatação de saída com String.format;
+Boa prática de programação orientada a objetos.

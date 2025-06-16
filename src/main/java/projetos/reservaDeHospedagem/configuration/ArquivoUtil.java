@@ -6,25 +6,15 @@ import projetos.reservaDeHospedagem.model.Reserva;
 
 import java.io.*;
 import java.util.ArrayList;
+import java.util.List;
 
-public class ArquivoUtil {
-    /*
-    Função: Responsável pela persistência de dados em arquivos binários.
-
-    Métodos:
-    salvarClientes(List<Cliente>)
-    carregarClientes()
-    salvarReservas(List<Reserva>)
-    carregarReservas()
-    salvarQuartos(List<Quarto>)
-    carregarQuartos()
-     */
-    private static final String CLIENTES_ARQ = "clientes.dat";
-    private static final String QUARTOS_ARQ = "quartos.dat";
-    private static final String RESERVAS_ARQ = "reservas.dat";
+public class ArquivoUtil implements Serializable {
+    private static String CLIENTES_ARQ = "clientes.dat";
+    private static  String QUARTOS_ARQ = "quartos.dat";
+    private static String RESERVAS_ARQ = "reservas.dat";
 
     // Clientes
-    public static void salvarClientes(ArrayList<Cliente> clientes) {
+    public static void salvarClientes(List<Cliente> clientes) {
         try (ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream(CLIENTES_ARQ))) {
             out.writeObject(clientes);
         } catch (IOException e) {
@@ -32,9 +22,9 @@ public class ArquivoUtil {
         }
     }
 
-    public static ArrayList<Cliente> carregarClientes() {
+    public static List<Cliente> carregarClientes() {
         try (ObjectInputStream in = new ObjectInputStream(new FileInputStream(CLIENTES_ARQ))) {
-            return (ArrayList<Cliente>) in.readObject();
+            return (List<Cliente>) in.readObject();
         } catch (IOException | ClassNotFoundException e) {
             System.out.println("Nenhum cliente carregado. Iniciando lista vazia.");
             return new ArrayList<>();
@@ -42,7 +32,7 @@ public class ArquivoUtil {
     }
 
     // Quartos
-    public static void salvarQuartos(ArrayList<Quarto> quartos) {
+    public static void salvarQuartos(List<Quarto> quartos) {
         try (ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream(QUARTOS_ARQ))) {
             out.writeObject(quartos);
         } catch (IOException e) {
@@ -50,9 +40,9 @@ public class ArquivoUtil {
         }
     }
 
-    public static ArrayList<Quarto> carregarQuartos() {
+    public static List<Quarto> carregarQuartos() {
         try (ObjectInputStream in = new ObjectInputStream(new FileInputStream(QUARTOS_ARQ))) {
-            return (ArrayList<Quarto>) in.readObject();
+            return (List<Quarto>) in.readObject();
         } catch (IOException | ClassNotFoundException e) {
             System.out.println("Nenhum quarto carregado. Iniciando lista vazia.");
             return new ArrayList<>();
@@ -60,7 +50,7 @@ public class ArquivoUtil {
     }
 
     // Reservas
-    public static void salvarReservas(ArrayList<Reserva> reservas) {
+    public static void salvarReservas(List<Reserva> reservas) {
         try (ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream(RESERVAS_ARQ))) {
             out.writeObject(reservas);
         } catch (IOException e) {
@@ -68,13 +58,12 @@ public class ArquivoUtil {
         }
     }
 
-    public static ArrayList<Reserva> carregarReservas() {
+    public static List<Reserva> carregarReservas() {
         try (ObjectInputStream in = new ObjectInputStream(new FileInputStream(RESERVAS_ARQ))) {
-            return (ArrayList<Reserva>) in.readObject();
+            return (List<Reserva>) in.readObject();
         } catch (IOException | ClassNotFoundException e) {
             System.out.println("Nenhuma reserva carregada. Iniciando lista vazia.");
             return new ArrayList<>();
         }
     }
-
 }

@@ -1,0 +1,8 @@
+Semelhante à To-Do List, mas com campos como:
+* Título do livro
+* autor
+* Já deu? (sim/não)
+
+Extras
+* Filtrar por livros lidos ou não lidos
+* Ordenar por título
