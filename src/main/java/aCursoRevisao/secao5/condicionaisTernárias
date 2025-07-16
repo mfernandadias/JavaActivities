@@ -1,0 +1,6 @@
+Uma forma compacta de expressar uma consição if-else
+Sintaxe: condição ? expressão 1 ? expressão 2
+Funcionamento: Avalia a condição; se for verdadeira, retorna
+expressão 1, caso contrário, retorna expressão 2
+Ideal para atribuições simples e condições em linha
+Limitação: Deve ser usado

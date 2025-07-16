@@ -1,1 +1,7 @@
 Anotacoes
+O que é uma Thread ?
+Thread é uma linha de execução dentro de um programa
+Um processo pode ter várias threads, compartilhando memória e recursos
+Ex: um jogo pode ter uma thread para áudio, outra para a lógica, outra para a interface
+
+

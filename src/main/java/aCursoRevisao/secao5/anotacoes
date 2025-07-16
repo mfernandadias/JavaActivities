@@ -1,0 +1,21 @@
+Coondicionais
+O que é boolean?
+* boolena é um tipoi de dado primitivo
+
+Estruturas de Condição
+* if: Executa um bloco de código for verdadeira
+* else: Executa um bloco de código alternativo se a consição do if for falsa
+* else if:
+* switch:
+Importante: Todas essas estruturas permitem controlcar o fluxo de
+execução com base em condições lógicas
+
+Conhecendo o if
+* if executa um blóco de código se a condição for verdadeira
+Coloque a condição entre parametros
+
+Operadores Lódigos
+&&
+||
+!
+Combinação

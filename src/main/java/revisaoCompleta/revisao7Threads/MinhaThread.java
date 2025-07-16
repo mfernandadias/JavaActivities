@@ -5,4 +5,10 @@ public class MinhaThread extends Thread {
         System.out.println("Executando na thread: " + Thread.currentThread().getName());
     }
 
+
+    public static void main(String[] args) {
+        MinhaThread t = new MinhaThread();
+        t.start();
+    }
 }
+

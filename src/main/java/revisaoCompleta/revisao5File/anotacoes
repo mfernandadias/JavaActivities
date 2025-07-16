@@ -54,3 +54,8 @@ ObjectInputStream: lê objetos de arquivos (desserialização)
 
 🎯 Importante:
 A classe do objeto deve implementar Serializable
+
+Conceito Básico
+Em Java, Strems são fluxos e dados(entrada ou saída). Eles servem para ler e
+escrever dados(texto, bytes ou objetos) em arquivos, memória ou outros dispositivos.
+
