@@ -1,0 +1,78 @@
+🔒 final em Java: conceito geral
+A palavra-chave final serve para impedir modificações. Ela pode ser usada com:
+
+Variáveis → impede reatribuição.
+
+Métodos → impede sobrescrita.
+
+Classes → impede herança.
+
+🧱 CLASSE final
+📌 O que é:
+Uma classe final não pode ser estendida (herdada).
+
+✅ Quando usar:
+Quando você quer impedir que outra classe derive da sua (por exemplo, por segurança ou para manter comportamento fixo).
+
+📌 Exemplo:
+java
+Copy
+Edit
+final class ContaBancaria {
+    public void sacar(double valor) {
+        System.out.println("Sacando " + valor);
+    }
+}
+
+// ERRO: não é possível estender uma classe final
+class ContaPoupanca extends ContaBancaria {
+    // ...
+}
+🔧 MÉTODO final
+📌 O que é:
+Um método final não pode ser sobrescrito (overridden) por subclasses.
+
+✅ Quando usar:
+Quando você quer garantir que a implementação do método não seja alterada por classes filhas.
+
+📌 Exemplo:
+java
+Copy
+Edit
+class Veiculo {
+    public final void ligarMotor() {
+        System.out.println("Motor ligado!");
+    }
+
+    public void acelerar() {
+        System.out.println("Acelerando...");
+    }
+}
+
+class Carro extends Veiculo {
+    // ERRO: não pode sobrescrever método final
+    // public void ligarMotor() {
+    //     System.out.println("Motor do carro ligado!");
+    // }
+
+    @Override
+    public void acelerar() {
+        System.out.println("Carro acelerando...");
+    }
+}
+🧠 Dica Importante:
+Uma classe final automaticamente torna todos os seus métodos não-sobrescrevíveis, mesmo que você não use final nos métodos.
+
+Um método final pode estar em uma classe normal (não-final).
+
+🟨 Comparativo Rápido:
+Elemento	Com final significa...
+final classe	Não pode ser herdada
+final método	Não pode ser sobrescrito
+final variável	Não pode ser reatribuída
+
+Reflection API
+O que pe Reflexão(Refletion API)?
+-- Reflexão é uma API que permite inspecionar e modificar o comportamento de classes,
+métodos e atributos em tempo de exeução
+--
