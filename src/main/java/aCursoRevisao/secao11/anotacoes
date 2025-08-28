@@ -1,0 +1,6 @@
+Estrutura for
+for é uma estrutura de repetição que permite executar um bloco de código um
+número determinado de vezes
+Ideal para quando se sabe o número exato de iterações
+Consiste em trÊs partes inicialização, condição e incremento
+Oferece controle sobre o fluxo de repetição com variáveis de início e incremento
