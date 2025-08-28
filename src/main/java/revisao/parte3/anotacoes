@@ -1,0 +1,59 @@
+Classe e Objeto
+Classe é um modelo/estrutura
+Objeto é uma instância da classe
+
+
+Atributos e Métodos
+Atributos são as caracteristicas da classe
+Métodos são as ações
+
+public class Cachorro {
+    String nome;
+    int idade;
+
+    void latir() {
+        System.out.println("Au au!");
+    }
+}
+
+Construtor
+Construtor inicializa o objeto. Tem o mesmo nome da classe e não tem retorno
+public class Produto {
+    String nome;
+    double preco;
+
+    // Construtor
+    public Produto(String nome, double preco) {
+        this.nome = nome;
+        this.preco = preco;
+    }
+}
+
+toString()
+retorna uma representação em texto do objeto
+public class Livro {
+    String titulo;
+
+    public Livro(String titulo) {
+        this.titulo = titulo;
+    }
+
+    @Override
+    public String toString() {
+        return "Livro: " + titulo;
+    }
+}
+
+static
+Pertence à classe, não ao objeto
+public class Util {
+    public static int dobro(int x) {
+        return x * 2;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        System.out.println(Util.dobro(5)); // Não precisa instanciar Util
+    }
+}

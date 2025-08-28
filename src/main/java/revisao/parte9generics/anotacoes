@@ -1,0 +1,39 @@
+Generics
+
+O que são Generics ?
+Generics são uma funcionalidade que permite criar classes, interfaces e métodos que operam com
+tipos de dados parametrizados
+Introduzidos no Java 5, os Generics ajudam a criar cóidgo mais flexível e reutilizável, sem a
+necessidade de definir tipos de dados específicos
+Objetivo: permitir que uma estrutura de dados ou métodos trabalhe com diferentes tipos
+de dados, proporcionando segurança de tipos durante a compilação
+Generics evitam o uso excessivo de casting e garantem que tipos incorretos não sejam atribuidos
+a coleções ou métodos
+Usados amplamente em classes de coleções como List, Set, e Map, garantindo que os
+elementos armazenados sejam do tipo correto
+Benerícios
+* Segurança de tipos: Erros de tipo são detectados em tempo de compilação
+* Reutilização de código: Um código genérico pode ser usado para diferentes tipos sem duplicação
+* Legibilidade: O código se torna mais claso a provisível ao definir explicitamente o tipo
+de dados
+
+Criando classe Genericas
+* Classes Genéricas permitem que uma classe opere com tipos de dados diferentes de maneira
+parametrizada
+* Uma classe genérica utiliza parâmetros de tipo(como <T>, <E>, <K, V>) que podem ser
+substituídos por tipos específicos durante a criação de objetos
+Vantagens
+-- Maior flexibilidade e reutilização do código sem a necessidade de duplicação para tipos diferentes
+-- Segurança de tipos em tempo de compilação, prevenindo erros relacionados a tipos
+* Sintaxe: A classe genperica é declarada com um parâmetro de tipo dentro de colchetes angulares(<>),
+como <T>, onde T pode ser qualquer nome que representa um tipo de dado:
+* Classes genéricas são amplamente utilizadas nas coleções do Java (ex: List<T>, Map<K, V>)
+Exemplo de Uso:
+Uma classe genérica pode manipular qualquer tipo de dados, seja Interger, String, ou até
+
+
+Métodos
+* Métodos Genéricos permitem que um método opere com diferentes com diferentes de dados, de forma
+parametrizada, semelhandte a classes genéricas
+* A principal diferença é que o parâmetro de tipo é declarado no nível do método e pode ser
+usado em qualquer método dentro da classe, sem tornar a classe inteira genérica

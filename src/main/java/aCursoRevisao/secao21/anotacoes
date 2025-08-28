@@ -1,0 +1,27 @@
+O que são Exceções ? (erros)
+* Exceções são eventos inesperados que interrompem a execução
+normal de um programa geralmente causados por erros de lógica ou condições
+imprevistas
+Em Java, todas as execuções são objetos que herdam da classe Throwable:
+As exceções podem ser verificadas(checked) ou não verificadas(unchecked)
+Verificadas: São verificadas pelo compilador e devem ser tratadas ou declaradas
+explicitamente. Ex: IOExpeceprion
+Não verificadas: Ocorrências em tempo de execução, não são obrigatórios de tratar
+Ex: NullPointerException
+O tratamentoo de execuções permite capturar e lidar com erros, mantendo a
+estabilidade do programa e prevenindo encerramento abruptos
+
+
+Tempo de compilação vs Tempo de execução
+Tempo de Compilação: Quando o código é veririfcado e convertido em bytecode pelo
+compilador
+Erros detectados: Sintaxe, tipos, declarações faltantes
+
+
+Bloco try- catch
+O bloco try-catch permite capturar e tratar exceções que ocorrem durante a execução
+do programa
+O código que pode gerar uma execução é colocado dentro do bloco try
+O bloco catch captura a execução e executa o código de tratamento
+É possivel ter múltiplos blocos catch para tratar diferentes tipos de execuções
+Usar try-catch evita que o programa encerre inesperadamente em cado de erro

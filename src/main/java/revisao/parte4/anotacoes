@@ -1,0 +1,63 @@
+
+Modificadores: super, protected, final
+super: acessa membros da superclasse
+
+class Animal {
+    void som() {
+        System.out.println("Som de animal");
+    }
+}
+
+class Gato extends Animal {
+    void som() {
+        super.som(); // chama o som() da classe Animal
+        System.out.println("Miau");
+    }
+}
+
+protected: visível para classes no mesmo pacote ou subclasses
+
+Herança(extends) permite que uma classe (subclasse) herde atributos e métodos de
+outra classe (
+
+protected
+Permite acesos ao membro da classe dentro do mesmo pacote ou em subclasses, mesmo
+fora do pacote
+class Pessoa {
+    protected String nome = "Maria";
+}
+
+class Aluno extends Pessoa {
+    void exibirNome() {
+        System.out.println(nome); // Acessa diretamente por ser protected
+    }
+}
+
+final
+Classe final: não pode ser herdada
+Método final: não pode ser sobrescrito
+final class Veiculo {
+    final void mover() {
+        System.out.println("Movendo");
+    }
+}
+
+// class Carro extends Veiculo {} // ERRO: não pode estender classe final
+
+✅ 3. Polimorfismo (@Override)
+Polimorfismo permite que o mesmo método tenha comportamentos diferentes nas subclasses.
+class Animal {
+    void fazerSom() {
+        System.out.println("Som do animal");
+    }
+}
+
+class Cavalo extends Animal {
+    @Override
+    void fazerSom() {
+        System.out.println("Relincha");
+    }
+}
+
+
+
