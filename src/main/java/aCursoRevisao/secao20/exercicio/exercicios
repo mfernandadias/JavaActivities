@@ -1,0 +1,14 @@
+Exercicio 01: Composição de Objetos(Object composition)
+Enunciado: Crie uma classe Endereco que tenha os atributos rua,
+numero e cidade
+Agora, crie uma classe Pessoa que tenha atributos como nome, idade e
+um atributo de composicao endereço, que sera do tipo Endereco
+Implemente um método exibirInformações() em Pessoa que exiba os dados da
+pessoa e seu endereço completo
+
+
+Exercicio 02: Herança e Sobrescrita de Métodos (Overrinding)
+Enunciado: Crie uma classe Veiculo com o método acelerar() que exiba
+a mensagem "O veículo está acelerando"
+Na subclasse Carro, sobrescreva o método acelerar() para axibir está acelerando
+Na subclasse Moto, sobrescreva o método para exibir "A moto está acelerando"
