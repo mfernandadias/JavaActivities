@@ -1,0 +1,51 @@
+Classe Bastrata
+* Uma classe que não pode ser instanciada diretamente
+* Pode conter métodos abstratos(sem corpo)  e métodos concretos(com corpo)
+* Permite a existência de atributos  e construtores
+* Serve para definir um comportamento comum, que pode ser herdado por dubclasses
+* Uma classe pode herdar apenas uma única classe abstrata
+
+Interface
+* Um contrato que define métodos que uma classe deve implementar
+* Antes do Java 8, continha apenas métodos abstratos. A partir do Java 8, pode ter
+métodos default e static com implementação
+* Não pode ter construtores ou atributos de instâncias, aoenas constantes
+* Uma classe pode implementar múltiplicas interfaces ao mesmo tempo
+
+Polimorfismo
+* Polimorfismo é um dos pilares da Programção Orientada a Objetos (POO):
+O termo significa "muitas formas" e permite que uma única interface (ou tipo)
+seja usada para diferentes tipos de objetos
+* Em Java, o polimorfismo permite que um objeto de uma subclasse seja tratada
+como um objeto de sua superclasse, e também que métodos da superclasse sejam
+sobrescritos pelas subclasses:
+Existem dois tipos de polimorfismo:
+* Polimorfismo de Sobrescrito (Override): Quando uma subclasse ofrnece sua própria
+implementação de um método herdado da superclasse
+* Polimorfismo de Sobrecarga (Overload): Quando vários métodos têm o mesmo nome,
+mas com assinaturas diferentes (há será o foco aqui):
+
+O que é Polimorfismo ?
+significa "Muitas formas". Em Java, é principal da Programação Orientada a Objetos
+(POO) que permite que objetos de classes diferentes possam ser tratados como
+objetos de uma superclasse comum
+Existem dois tipos principais
+1 - Polimosfirmo em tempo de compilação de métodos
+2 - Polimorfimso em tempo de execução(sobrescrita de métodos)
+
+Métodos e Classes final
+O que é final em Java ?
+* A palavra-chave final pode ser usada em classes, métodos e variáveis:
+* QUando aplicada a classes e métodos, impede modificações e sobrescritas:
+
+Classes final
+* Uma classe marcada como final não pode ser estendida
+* Uso: Quando você quer garantir que a implementação de uma classe não seja alterada por subclasses
+
+Métodos final
+* Um método marcado como final não pode ser sobrescrito por subclasses
+Uso: Para proteger comportamentos essesciais que não devem ser alterados
+
+Quando usar final?
+* Classes final: Use quando quiser impedir que uma classe seja herdada
+* Métodos final: Use quando quiser garantir que métodos importantes não sejam sobrescritos
