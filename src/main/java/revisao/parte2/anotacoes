@@ -1,0 +1,5 @@
+Métodos (void, retorno e parâmetros)
+Um método é um bloco de código que executa uma tarefa específica
+void: Não retorna valor
+Com return: devolve um resultado
+Com parâmetros: recebe valores para processar
