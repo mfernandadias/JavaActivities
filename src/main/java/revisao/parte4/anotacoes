@@ -2,23 +2,7 @@
 Modificadores: super, protected, final
 super: acessa membros da superclasse
 
-class Animal {
-    void som() {
-        System.out.println("Som de animal");
-    }
-}
 
-class Gato extends Animal {
-    void som() {
-        super.som(); // chama o som() da classe Animal
-        System.out.println("Miau");
-    }
-}
-
-protected: visível para classes no mesmo pacote ou subclasses
-
-Herança(extends) permite que uma classe (subclasse) herde atributos e métodos de
-outra classe (
 
 protected
 Permite acesos ao membro da classe dentro do mesmo pacote ou em subclasses, mesmo
