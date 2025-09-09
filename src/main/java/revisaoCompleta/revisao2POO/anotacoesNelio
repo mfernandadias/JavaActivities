@@ -1,0 +1,12 @@
+Seção 9 - Contrutores, palava this, sobrecarga, encapsulamento
+Introdução: visão geral do capítulo
+
+Contrutor
+Se  um contrutor customizado não for específicado, a classe disponibiliza o contrutor
+padrão
+
+Palavra this
+É uma referência para o próprio objeto
+
+Usos comuns: Diferenciar atributos de várias locais
+Passar o próprio objeto como argumento na chamada de métoso ou contrutor
